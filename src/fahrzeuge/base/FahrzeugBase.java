@@ -98,6 +98,7 @@ public abstract class FahrzeugBase implements Fahrzeug{
             System.out.println("Gebremst auf " + this.geschwindigkeit + " km/h");
         }
     }
+    //
 
     @Override
     public String status() {
