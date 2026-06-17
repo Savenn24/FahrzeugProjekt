@@ -67,6 +67,58 @@ public abstract class FahrzeugBase implements Fahrzeug{
         this.geschwindigkeit = 0.0;
     }
 
+    /*
+     * Implementierung der Interface-Methoden
+     * Da FahrzeugBase das Interface implementiert, MÜSSEN alle Methoden aus dem interface hier
+     * implementiert werden (außer deault- und static-Methoden)
+     */
+
+    @Override
+    public double getGeschwindigkeit(){
+        // this.geschwindigkeit = Zugriff auf die Instanzvariable
+        return this.geschwindigkeit;
+    }
+
+    @Override
+    public void beschleunigen(double wert) {
+        // Überprüfen, ob der Wert positiv ist (nur dann beschleunigen)
+        if (wert > 0) {
+            this.geschwindigkeit += wert;
+            System.out.println("Beschleunigt auf " + this.geschwindigkeit + " km/h");
+        }
+        // Wenn wert <= 0 passiert nix. Kein else notwendig
+    }
+
+    @Override
+    public void bremsen(double wert){
+        // Überprüfen ob der Wet Positiv ist
+        if (wert > 0) {
+            // Math.max(0,....) stellt sicher, dass die Geschwindigkeit nicht negativ wird
+            this.geschwindigkeit = Math.max(0, this.geschwindigkeit - wert);
+            System.out.println("Gebremst auf " + this.geschwindigkeit + " km/h");
+        }
+    }
+
+    @Override
+    public String status() {
+        // String.format() erstellt einen formatierten String(ähnlich wie printf)
+        // %s = String, %.1f = double mit einer Nachkommastelle
+        return String.format("%s %s (%d), Geschwindigkeit: %.1f km/h",
+                this.hersteller,
+                this.modell,
+                this.baujahr,
+                this.geschwindigkeit);
+    }
+
+    /* 4. Abstrakte Methoden (müssen von Kindsklassen implementiert werden)*/
+    /**
+     * Abstrakte Methoden haben KEINE IMPLEMENTIERUNG (kein {}-Block)
+     * Sie zwingen alle Kindsklassen, diese Methode zu implementieren.
+     *
+     * @return Die maximale Geschwindigkeit des Fahrzeuges in km/h
+     */
+
+    public abstract double getMaxGeschwindigkeit();
 
 
 
