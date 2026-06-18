@@ -98,7 +98,7 @@ public abstract class FahrzeugBase implements Fahrzeug{
             System.out.println("Gebremst auf " + this.geschwindigkeit + " km/h");
         }
     }
-    //
+
 
     @Override
     public String status() {
@@ -119,7 +119,46 @@ public abstract class FahrzeugBase implements Fahrzeug{
      * @return Die maximale Geschwindigkeit des Fahrzeuges in km/h
      */
 
-    public abstract double getMaxGeschwindigkeit();
+    public abstract int getMaxGeschwindigkeit();
+
+    // 5. Konkrete Methode mit Implementierung
+    /*
+    * konkrete Methoden haben eine Implementierung und können von Kindklassen
+    * überschreiben oder geerbt werden*/
+    /**
+     * Berechne die Fahrzeit für eine bestimmte Strecke
+     * @param strecke die Strecke in Kilometer
+     * @return die Fahrzeit in Stunden
+     * @throws IllegalStateException wenn das Fahrzeug steht, Geschwindigkeit <= 0
+     */
+
+    public double berechneFahrzeit(double strecke) {
+        // Überprüfen ob das Fahrzeug steht
+        if(this.geschwindigkeit <= 0){
+            throw new IllegalStateException(("Fahrzeug steht still! Geschwindigkeit muss > 0 sein"));
+        }
+        // berechnung: Zeit = Strecke / Geschwindigkeit
+        return strecke / this.geschwindigkeit;
+
+    }
+
+    // 6. Getter.Methoden zum Auslesen der Attribute
+    /* Getter.Methoden:
+    * - öffentlich Methode zum Auslesen privater/geschützter Attribute
+    * - Kein 'this.' nötig, da keine Namenskonflikte mit lokalen Variablen
+    */
+
+    public String getHersteller(){
+        return hersteller;
+    }
+
+    public String getModell(){
+        return modell;
+    }
+
+    public  int getBaujahr(){
+        return baujahr;
+    }
 
 
 

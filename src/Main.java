@@ -1,13 +1,36 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+import fahrzeuge.autos.Auto;
+import fahrzeuge.base.FahrzeugBase;
+import fahrzeuge.interfaces.Fahrzeug;
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+public class Main {
+    public static void main(String[] args) {
+        // 1. Programmheader und Grundeinstellung
+
+        System.out.println("=======================================================");
+        System.out.println("                    Fahrzeug-Projekt                   ");
+        System.out.println("=======================================================");
+        System.out.println("  Maximal erlaubte Autobahn-Geschwindigkeit: " + Fahrzeug.getMaxAutobahnGeschwindigkeit()
+                            + " km/h");
+        System.out.println("=======================================================");
+
+        // 2. Fahrzeug Instanziieren
+        // Erstelle verschiedene Fahrzeugtypen zur Demo
+        // Ein normales Auto mit Verbrennungsmotor
+
+        Auto auto1 = new Auto("Audi", "A6", 2020, 4, true);
+        Auto auto2 = new Auto("Fiat", "Punto", 2022, 5, true);
+        System.out.println(auto1);
+
+        // 3. Fahrzeuge in einem Array Speicher
+        // Demonstration von Polymorphie: verschieden Fahrzeugtypen werden als fahrzeugBase behandelt
+        FahrzeugBase[] fahrzeuge = {
+                auto1,
+                auto2
+
+        };
+
     }
 }
+
+
+
