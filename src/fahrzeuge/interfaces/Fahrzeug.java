@@ -3,7 +3,7 @@ package fahrzeuge.interfaces;
 /* Dieses Interface definiert den Grundvertrag für alle Fahrzeuge im Projekt.
  * Was ist ein Interface?
  * Ein Interface ist eine reine Abstraktion (keine Implementierung von Code).
- * Es definiert nur WAS ein Fahrzeug können muss (Methoden), aber nicht WIE (Implementierung
+ * Es definiert nur WAS ein Fahrzeug können muss (Methoden), aber nicht WIE (Implementierung)
  * Alle Klassen, die dieses Interface implementieren, MÜSSEN alle Methoden implementieren
  * (außer default- und static-Methoden
  *
@@ -23,7 +23,7 @@ public interface Fahrzeug {
      *  - static - gehört zur Klasse, nicht zur Instanz
      *  - final  - können nicht verändert werden
      *
-     * HERSTELLER ist Standartwer, der für alle Fahreuge gilt,
+     * HERSTELLER ist Standardwert, der für alle Fahrzeuge gilt,
      * die diese Interfaces implementieren. Kann aber überschrieben werden
      * */
 
@@ -39,14 +39,14 @@ public interface Fahrzeug {
      * <p>
      * Gibt die aktuelle Geschwindigkeit zurück.
      *
-     * @return Geschwindigkeit in Kilometer pro Stunde (km/h)als double
+     * @return Geschwindigkeit in Kilometer pro Stunde (km/h) als double
      *
      */
 
     double getGeschwindigkeit();
 
     /**
-     * Beschleunigt das Fahrzeug um die angegebenen Wert
+     * Beschleunigt das Fahrzeug um den angegebenen Wert
      *
      * @param wert Die Geschwindigkeitsänderung in km/h (positiv = beschleunigen, negativ = bremsen
      *
@@ -96,9 +96,9 @@ public interface Fahrzeug {
         return "Unbekanntes Fahrzeug";
     }
 
-    /**
+    /*
      * 4.Statische-Methoden (gehören zum Interface, nicht zur Instanz)
-     * Statische.Methoden können dirket über das Interface aufgerufen werden, ohne ein Objekt
+     * Statische-Methoden können direkt über das Interface aufgerufen werden, ohne ein Objekt
      * zu erstellen
      *
      * Fahrzeug.getMaxAutobahnGeschwindigkeit() kann ohne Fahrzeug-Objekt aufgerufen werden

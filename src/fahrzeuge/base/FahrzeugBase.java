@@ -3,19 +3,19 @@ package fahrzeuge.base;
 import fahrzeuge.interfaces.Fahrzeug;
 
 /**
- * Abstrakte Klasse für alle Fahzeuge
+ * Abstrakte Klasse für alle Fahrzeuge
  * Was ist eine abstrakte Klasse?
  * Eine Klasse, die NICHT instanziiert werden kann (kein "new FahrzeugBase()")
  * Kann sowohl abstrakte als auch konkrete Methoden haben.
  * Dient als gemeinsame Basis für Vererbung
  * Warum verwenden wir diese abstrakten Klassen?
  * gemeinsame Attribute: alle Fahrzeuge haben Hersteller, Modell, Baujahr, Geschwindigkeit.
- * Gemeinsame Implementierung: Methoden wie bescheleunigen(), bremsen(), status() sind
+ * Gemeinsame Implementierung: Methoden wie beschleunigen(), bremsen(), status() sind
  * für alle gleich.
  * Abstrakte Methoden: erzwingen, dass Kindklassen bestimmte Methoden implementieren
  * (z.B. getMaxGeschwindigkeit()).
  *
- * Vererbungshirarchie:
+ * Vererbungshierarchie:
  * FahrzeugBase (abstrakt)
  * |- Auto (konkret)
  * |- Elektroauto (konkret)
@@ -25,9 +25,9 @@ import fahrzeuge.interfaces.Fahrzeug;
 
 // FahrzeugBase implementiert das Interface Fahrzeug
 public abstract class FahrzeugBase implements Fahrzeug{
-    /*
-    1. Attribute (protected, damit Kindklassen Zugriff haben)
-     */
+
+    // 1. Attribute (protected, damit Kindklassen Zugriff haben)
+
 
     /**
      * protected:
@@ -45,13 +45,13 @@ public abstract class FahrzeugBase implements Fahrzeug{
     * */
     /**
      * Konstruktoren:
-     * Methoden mit dem selben Namen wie die Klasse
+     * Methoden mit demselben Namen wie die Klasse
      * Werden beim Erstellen eines Objekts mit "new" aufgerufen
      * Initialisiert die Attribute des Objekts
      *
      * this:
      * - bezieht sich auf das aktuelle Objekt (die Instanz der Klasse)
-     * - Wird verwenden, um Instanzvariablen von lokalen Variablen zu unterscheiden
+     * - Wird verwendet, um Instanzvariablen von lokalen Variablen zu unterscheiden
      * this.hersteller = Instanzvariable (Attribut der Klasse)
      * hersteller = Parameter des Konstruktors
      * @param hersteller Der Hersteller des Fahrzeuges
@@ -69,8 +69,8 @@ public abstract class FahrzeugBase implements Fahrzeug{
 
     /*
      * Implementierung der Interface-Methoden
-     * Da FahrzeugBase das Interface implementiert, MÜSSEN alle Methoden aus dem interface hier
-     * implementiert werden (außer deault- und static-Methoden)
+     * Da FahrzeugBase das Interface implementiert, MÜSSEN alle Methoden aus dem Interface hier
+     * implementiert werden (außer default- und static-Methoden)
      */
 
     @Override
