@@ -58,7 +58,7 @@ public class Auto extends FahrzeugBase {
      *
      */
     @Override
-    public int getMaxGeschwindigkeit(){
+    public double getMaxGeschwindigkeit(){
         return 220;
     }
 

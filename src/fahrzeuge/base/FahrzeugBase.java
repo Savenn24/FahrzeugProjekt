@@ -119,7 +119,7 @@ public abstract class FahrzeugBase implements Fahrzeug{
      * @return Die maximale Geschwindigkeit des Fahrzeuges in km/h
      */
 
-    public abstract int getMaxGeschwindigkeit();
+    public abstract double getMaxGeschwindigkeit();
 
     // 5. Konkrete Methode mit Implementierung
     /*
