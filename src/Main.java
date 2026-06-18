@@ -40,7 +40,7 @@ public class Main {
         };
 
         // 3. Grundinformationen aller Fahrezuge anzeigen
-        System.out.println("============ Grundinformationen aller Fahrzeuge ================\n");
+        System.out.println("\n\n============ Grundinformationen aller Fahrzeuge ================\n");
 
         for (int i = 0; i < fahrzeuge.length; i++){
             FahrzeugBase fahrzeug = fahrzeuge[i];
