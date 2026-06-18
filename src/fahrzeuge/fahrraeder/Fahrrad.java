@@ -42,5 +42,15 @@ public class Fahrrad extends FahrzeugBase {
         return  "Fahrrad";
     }
 
+    @Override
+    public void beschleunigen(double wert){
+        if(wert > 0){
+            // Math.min(..., 50.0) stellt sicher, dass die Geschwindigkeit nicht über 50.0 km/h geht.
+            double neueGeschwindigkeit = Math.min(this.geschwindigkeit + wert, 50.0);
+            this.geschwindigkeit = neueGeschwindigkeit;
+            System.out.println("Fahrrad beschleunigt auf " + this.geschwindigkeit + " km/h");
+        }
+    }
+
 
 }
