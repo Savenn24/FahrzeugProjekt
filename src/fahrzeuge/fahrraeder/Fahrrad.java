@@ -52,5 +52,21 @@ public class Fahrrad extends FahrzeugBase {
         }
     }
 
+    @Override
+    public  String status(){
+        return super.status() + String.format(", Gänge: %d, Licht: %s",
+                this.anzahlGaenge,
+                this.hatLicht ? "vorhanden" : "nicht vorhanden");
+    }
+
+    //4. Getter-Methode
+    public int getAnzahlGaenge(){
+        return anzahlGaenge;
+    }
+
+    public boolean getHatLicht(){
+        return hatLicht;
+    }
+
 
 }

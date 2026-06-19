@@ -99,6 +99,7 @@ public class Elektroauto extends Auto {
                 ladestandProzent);
     }
 
+
     // getter-Methode
 
     public double getBatterieKapazitaet() {
@@ -107,5 +108,10 @@ public class Elektroauto extends Auto {
 
     public double getAktuelleLadung() {
         return aktuelleLadung;
+    }
+
+    @Override
+    public String getFahrzeugArt(){
+        return "Elektroauto";
     }
 }
