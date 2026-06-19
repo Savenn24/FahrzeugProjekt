@@ -8,7 +8,7 @@ package fahrzeuge.interfaces;
  * (außer default- und static-Methoden
  *
  * Warum verwenden wir Interface?
- * Einheitlicher Vertrag: Jedes Fahrzeug muss dieselbe Grundmethoden haben.
+ * Einheitlicher Vertrag: Jedes Fahrzeug muss dieselbe Grundmethode haben.
  * Polymorphie: Wir können alle Fahrzeuge über den Typ "Fahrzeug" behandeln
  * Mehrfachvererbung: Eine Klasse kann mehrere Interface implementieren.*/
 
@@ -58,7 +58,7 @@ public interface Fahrzeug {
     * Bremst das Fahrzeug um den angegebenen Wert
     * @param wert Die Geschwindigkeitsreduzierung in km/h (muss positiv sein)
     *
-     * Der Wert sollte immer Positiv sein.
+    * Der Wert sollte immer Positiv sein.
     * Implementierung muss sicherstellen, dass die Geschwindigkeit nicht negativ wird.*/
 
     void bremsen(double wert);

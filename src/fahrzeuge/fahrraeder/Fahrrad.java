@@ -8,7 +8,7 @@ import fahrzeuge.base.FahrzeugBase;
 // Das zeigt, dass das Interface für alle Fahrzeuge gilz, nicht nur für Autos/Motorräder
 public class Fahrrad extends FahrzeugBase {
 
-    //1. Neue Attribute spezifisch für Fahrräder
+    // 1. Neue Attribute spezifisch für Fahrräder
 
     private int anzahlGaenge;
     private boolean hatLicht;
@@ -23,7 +23,7 @@ public class Fahrrad extends FahrzeugBase {
      * @param modell Modell
      * @param baujahr Baujahr
      * @param anzahlGaenge Anzahl der Gänge
-     * @param hatLicht Ob das Fahrrd Licht hat (true/false)*/
+     * @param hatLicht Ob das Fahrrad Licht hat (true/false)*/
 
     public Fahrrad(String hersteller, String modell, int baujahr, int anzahlGaenge, boolean hatLicht){
         super(hersteller, modell, baujahr);

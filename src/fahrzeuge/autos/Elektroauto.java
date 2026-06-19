@@ -36,7 +36,7 @@ public class Elektroauto extends Auto {
      * @param batterieKapazitaet batteriekapazität in KWh*/
     public Elektroauto(String hersteller, String modell, int baujahr, int anzahlTueren, double batterieKapazitaet){
         // super():
-        // Ruft den Konstruktor der direkten Elterklasse (Auto) auf
+        // Ruft den Konstruktor der direkten Elternklasse (Auto) auf
         // Auto wiederum spuer() in FahrzeugBase auf
         super(hersteller, modell, baujahr, anzahlTueren,true);
         // INitialisierung der neuen Attribute
@@ -47,7 +47,7 @@ public class Elektroauto extends Auto {
     // 3. Überschreiben von Methoden
     /**
      * Überschreiben von getMaxGeschwindigkeit():
-     * elektroautos haben typischerweise eine geringere Maximalgeschwindigkeit als Verbrenner.
+     * Elektroautos haben typischerweise eine geringere Maximalgeschwindigkeit als Verbrenner.
      *
      * @return Maximale Geschwindigkeit des Elektroautos in km/h (180) km/h*/
 
@@ -60,14 +60,15 @@ public class Elektroauto extends Auto {
     // 4. Neue Methode spezifisch für Elektroauto
     /**
      * lädt die Batterie des Elektroautos
-     * @param KWh Die Menge an Energie in KWh, die geladen werden soll
+     * @param kwh Die Menge an Energie in KWh, die geladen werden soll.
      *
-     * logik:
-     * Wenn die neueLadung die Kapaziät übersteigt, iwrd auf voll Kapazität geladen
+     * Logik:
+     * Wenn die neueLadung die Kapazität übersteigt, wird auf volle Kapazität geladen
      * Sonst wird die angegebene Menge geladen*/
+
     public void laden(double kwh){
-        if (kwh == 0) return;  // Kein Laden bei negativem Wert
-        double neueLadung = this.aktuelleLadung + kwh; // Berechne die neue Ladung
+        if (kwh == 0) return;                           // Kein Laden bei negativem Wert
+        double neueLadung = this.aktuelleLadung + kwh;  // Berechne die neue Ladung
 
         if (neueLadung > this.aktuelleLadung) {
             // Wenn die Ladung die Kapazität übersteigt

@@ -2,7 +2,7 @@ package fahrzeuge.autos;
 
 import fahrzeuge.base.FahrzeugBase;
 
-/*
+/**
 * Klasse fpr Autos - Erbt von FahrzeugBase
 *
 * Vererbung:
@@ -24,7 +24,7 @@ import fahrzeuge.base.FahrzeugBase;
 public class Auto extends FahrzeugBase {
     // 1. Neue Attribute für die Auto-Klasse
     public int anzahlTueren;
-    public boolean klimaanalage;
+    public boolean klimaanlage;
 
     // Konstruktor für Auto-Klasse
     /**
@@ -32,8 +32,8 @@ public class Auto extends FahrzeugBase {
      *
      * super():
      * ruft den Konstruktor der Elternklasse (FahrzeugBase) auf
-     * Muss die eRSTE Anweisung im Konstuktor sein
-     * Übergeben der Parameter an die Elternklasse
+     * Muss die ERSTE Anweisung im Konstuktor sein.
+     * Übergeben der Parameter an die Elternklasse.
      *
      * @param hersteller Der Hersteller des Autos
      * @param modell Das Modell des Autos
@@ -46,7 +46,7 @@ public class Auto extends FahrzeugBase {
         super(hersteller, modell, baujahr);
         // Initialisierung der neuen Attribute (nur Auto)
         this.anzahlTueren = anzahlTueren;
-        this.klimaanalage = klimaanalage;
+        this.klimaanlage = klimaanlage;
     }
 
     // 3. Implementierung der Abstrakten Methode
@@ -82,8 +82,8 @@ public class Auto extends FahrzeugBase {
      * Spezifische Methoden für Autos: Aktiviert/Deaktiviert die Klimaanlage
      * @param aktiv true = Klimaanlage, false = Klimaanlage aus*/
 
-    public void setKlimaanalage(boolean aktiv){
-        this.klimaanalage = aktiv;
+    public void setKlimaanlage(boolean aktiv){
+        this.klimaanlage = aktiv;
         System.out.println("Klimaanlage " + (aktiv ? "aktiviert" : "deaktiviert"));  // ? Tenere Operator fragt nach Zustand.
     }
 
@@ -99,7 +99,7 @@ public class Auto extends FahrzeugBase {
         // Gibt den Basiszustand zurück (hersteller, modell, baujahr usw...)
         return super.status() + String.format(", Türen: %d, Klimaanlage: %s",
                 this.anzahlTueren,
-                this.klimaanalage ? "an" : "aus");
+                this.klimaanlage ? "an" : "aus");
 
     }
 
@@ -110,9 +110,9 @@ public class Auto extends FahrzeugBase {
     }
 
     public boolean hatKlimaanlage(){
-        return klimaanalage;
+        return klimaanlage;
     }
-    /***/
+
 
 
 
