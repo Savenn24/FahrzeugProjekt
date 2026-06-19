@@ -26,7 +26,9 @@ public class Main {
 
 
 
-        System.out.println("\nFuhrpark:   " + auto1.status() + "\n\t\t\t" + auto2.status()
+        System.out.println(
+                "\nFuhrpark:   " + auto1.status()
+                + "\n\t\t\t" + auto2.status()
                 + "\n\t\t\t" + eAuto1.status()
                 + "\n\t\t\t" + eAuto2.status());
 
